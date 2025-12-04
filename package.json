@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
     "dev": "next dev",
+    "build": "next build",
     "lint": "eslint .",
-    "start": "next start"
+    "start": "next start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
@@ -67,6 +69,7 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.5",
     "postcss-import": "^16.1.1",
     "tailwindcss": "^4.1.9",
